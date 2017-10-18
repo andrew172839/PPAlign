@@ -1,0 +1,11 @@
+GO = thread.bin
+PROG = $(GO)
+OBJS = data_in.o mathlib.o align.o thread.o 
+FC = ifort
+LIB =
+all:	$(PROG)
+default:	all
+clean:
+	rm -rf $(PROG) $(OBJS)
+	$(GO):	$(OBJS)
+	$(FC) -o $@ $(OBJS) $(LIB)
