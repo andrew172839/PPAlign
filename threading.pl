@@ -57,7 +57,7 @@ for (0..9) {
 	&gen_model($best, $seq);
 }
 my $i;
-my @energy_rank = `ls $seq-*.pdb | ./wupo.bin | sort -n -k2`;
+my @energy_rank = `ls $seq-*.pdb | ./potential.bin | sort -n -k2`;
 open MOD, ">$seq.model.list";
 print MOD @energy_rank;
 close MOD;
