@@ -1,14 +1,14 @@
-c     align_type = 1, 2 ,3, 4
+c     align_type = 1, 2, 3, 4
 c     1:  local alignment
 c     2:  global alignment
 c     3:  local-global alignment
 c         SEQqi will be penalized at both ends
-c         SEQdj will not be  penalized at either ends
+c         SEQdj will not be penalized at either ends
 c     4:  semi-global alignment
 c         both ends will not be penalized 
 
 c     trackback find a route from lower-right of matrix to 
-c     upleft of the matrix
+c     upleft of matrix
 c     The trackback info is stored in the 2XtrackI maxtrix B
 c     Alignment of qi and dj
 c     The first row contains the info of qi
@@ -44,7 +44,7 @@ c        do while (j < jj)
 c          trackI = trackI + 1
 c          B(1,trackI) = 0
 c          B(2,trackI) = jj
-c          jj = jj -1
+c          jj = jj - 1
 c        enddo
 c      endif
       do ii=si_len,i+1,-1
