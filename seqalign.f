@@ -67,8 +67,8 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
       integer i,IO_status
       character*200 ts
 
-      seq ="" 
-      i =len_trim(fn)
+      seq = "" 
+      i = len_trim(fn)
       open (10,file=fn(1:i),status="unknown",IOSTAT=IO_status)
       do while (IO_status .eq. 0)
         read (10,'(A200)',IOSTAT=IO_status) ts
